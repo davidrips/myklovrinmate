@@ -1,152 +1,1644 @@
+
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Myklovr</title>
+    <title>MyKlovr Inmates</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
     <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-</head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-<body>
-    
-    <form class="form-horizontal">
-<fieldset>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
-<!-- Form Name -->
-<legend>Form Name</legend>
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
 
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Text Input</label>  
-  <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
-  <span class="help-block">help</span>  
-  </div>
-</div>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="assets/js/ie-emulation-modes-warning.js"></script>
 
-<!-- Select Basic -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="selectbasic">Select Basic</label>
-  <div class="col-md-4">
-    <select id="selectbasic" name="selectbasic" class="form-control">
-      <option value="1">Option one</option>
-      <option value="2">Option two</option>
-    </select>
-  </div>
-</div>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
 
-<!-- Multiple Checkboxes -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="checkboxes">Multiple Checkboxes</label>
-  <div class="col-md-4">
-  <div class="checkbox">
-    <label for="checkboxes-0">
-      <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
-      Option one
-    </label>
-    </div>
-  <div class="checkbox">
-    <label for="checkboxes-1">
-      <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
-      Option two
-    </label>
-    </div>
-  </div>
-</div>
+  <body>
 
-<!-- Multiple Checkboxes (inline) -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="checkboxes">Inline Checkboxes</label>
-  <div class="col-md-4">
-    <label class="checkbox-inline" for="checkboxes-0">
-      <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
-      1
-    </label>
-    <label class="checkbox-inline" for="checkboxes-1">
-      <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
-      2
-    </label>
-    <label class="checkbox-inline" for="checkboxes-2">
-      <input type="checkbox" name="checkboxes" id="checkboxes-2" value="3">
-      3
-    </label>
-    <label class="checkbox-inline" for="checkboxes-3">
-      <input type="checkbox" name="checkboxes" id="checkboxes-3" value="4">
-      4
-    </label>
-  </div>
-</div>
-
-<!-- Prepended checkbox -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="prependedcheckbox">Prepended Checkbox</label>
-  <div class="col-md-4">
-    <div class="input-group">
-      <span class="input-group-addon">     
-          <input type="checkbox">     
-      </span>
-      <input id="prependedcheckbox" name="prependedcheckbox" class="form-control" type="text" placeholder="placeholder">
-    </div>
-    <p class="help-block">help</p>
-  </div>
-</div>
-
-<!-- Multiple Radios (inline) -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="radios">Inline Radios</label>
-  <div class="col-md-4"> 
-    <label class="radio-inline" for="radios-0">
-      <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
-      1
-    </label> 
-    <label class="radio-inline" for="radios-1">
-      <input type="radio" name="radios" id="radios-1" value="2">
-      2
-    </label> 
-    <label class="radio-inline" for="radios-2">
-      <input type="radio" name="radios" id="radios-2" value="3">
-      3
-    </label> 
-    <label class="radio-inline" for="radios-3">
-      <input type="radio" name="radios" id="radios-3" value="4">
-      4
-    </label>
-  </div>
-</div>
-
-<!-- Button Drop Down -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="buttondropdown">Button Drop Down</label>
-  <div class="col-md-4">
-    <div class="input-group">
-      <input id="buttondropdown" name="buttondropdown" class="form-control" placeholder="placeholder" type="text">
-      <div class="input-group-btn">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-          Action
-          <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu pull-right">
-          <li><a href="#">Option one</a></li>
-          <li><a href="#">Option two</a></li>
-          <li><a href="#">Option three</a></li>
-        </ul>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">MyKlovr Inmates</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Lifestyle</a></li>
+            <li><a href="health.html">Health</a></li>
+            <li><a href="skills.html">Skills/Education</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
-    </div>
-  </div>
-</div>
+    </nav>
 
-</fieldset>
-</form>
+    <div class="container">
+      <form class="form-horizontal">
+          <fieldset>
+
+          <!-- Form Name -->
+          <legend>Form Name</legend>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="General 1">How old will you be upon release?</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="General 1-0">
+                <input type="radio" name="General 1" id="General 1-0" value="1" checked="checked">
+                18 yrs - 30 yrs
+              </label>
+            </div>
+            <div class="radio">
+              <label for="General 1-1">
+                <input type="radio" name="General 1" id="General 1-1" value="2">
+                31 yrs - 45 yrs
+              </label>
+            </div>
+            <div class="radio">
+              <label for="General 1-2">
+                <input type="radio" name="General 1" id="General 1-2" value="3">
+                45 yrs - 65 yrs
+              </label>
+            </div>
+            <div class="radio">
+              <label for="General 1-3">
+                <input type="radio" name="General 1" id="General 1-3" value="4">
+                65 yrs +
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="General 2">How many years did you spend incarcerated?</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="General 2-0">
+                <input type="radio" name="General 2" id="General 2-0" value="1" checked="checked">
+                0 yrs - 5 yrs
+              </label>
+            </div>
+            <div class="radio">
+              <label for="General 2-1">
+                <input type="radio" name="General 2" id="General 2-1" value="2">
+                5 yrs - 10 yrs
+              </label>
+            </div>
+            <div class="radio">
+              <label for="General 2-2">
+                <input type="radio" name="General 2" id="General 2-2" value="3">
+                10 yrs - 20 yrs
+              </label>
+            </div>
+            <div class="radio">
+              <label for="General 2-3">
+                <input type="radio" name="General 2" id="General 2-3" value="4">
+                20 yrs +
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="General 3">What is your sex?</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="General 3-0">
+                <input type="radio" name="General 3" id="General 3-0" value="1" checked="checked">
+                Male
+              </label>
+            </div>
+            <div class="radio">
+              <label for="General 3-1">
+                <input type="radio" name="General 3" id="General 3-1" value="2">
+                Female
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="General 4">Do you identify as gay, lesbian, bisexual, or queer?</label>
+            <div class="col-md-4"> 
+              <label class="radio-inline" for="General 4-0">
+                <input type="radio" name="General 4" id="General 4-0" value="1" checked="checked">
+                Yes
+              </label> 
+              <label class="radio-inline" for="General 4-1">
+                <input type="radio" name="General 4" id="General 4-1" value="2">
+                No
+              </label>
+            </div>
+          </div>
+
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="General 5">Are you a veteran?</label>
+            <div class="col-md-4"> 
+              <label class="radio-inline" for="General 5-0">
+                <input type="radio" name="General 5" id="General 5-0" value="1" checked="checked">
+                Yes
+              </label> 
+              <label class="radio-inline" for="General 5-1">
+                <input type="radio" name="General 5" id="General 5-1" value="2">
+                No
+              </label>
+            </div>
+          </div>
+
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="General 6">Do you identify as transgender?</label>
+            <div class="col-md-4"> 
+              <label class="radio-inline" for="General 6-0">
+                <input type="radio" name="General 6" id="General 6-0" value="1" checked="checked">
+                Yes
+              </label> 
+              <label class="radio-inline" for="General 6-1">
+                <input type="radio" name="General 6" id="General 6-1" value="2">
+                No
+              </label>
+            </div>
+          </div>
+
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Housing 1">Do you have a permanent place to live?</label>
+            <div class="col-md-4"> 
+              <label class="radio-inline" for="Housing 1-0">
+                <input type="radio" name="Housing 1" id="Housing 1-0" value="1" checked="checked">
+                Yes
+              </label> 
+              <label class="radio-inline" for="Housing 1-1">
+                <input type="radio" name="Housing 1" id="Housing 1-1" value="2">
+                No
+              </label> 
+              <label class="radio-inline" for="Housing 1-2">
+                <input type="radio" name="Housing 1" id="Housing 1-2" value="3">
+                Maybe
+              </label>
+            </div>
+          </div>
+
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="General">Is english your native language?</label>
+            <div class="col-md-4"> 
+              <label class="radio-inline" for="General-0">
+                <input type="radio" name="General" id="General-0" value="1" checked="checked">
+                Yes
+              </label> 
+              <label class="radio-inline" for="General-1">
+                <input type="radio" name="General" id="General-1" value="2">
+                No
+              </label>
+            </div>
+          </div>
+
+          <!-- Multiple Checkboxes -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Housing 2">Will you be living:</label>
+            <div class="col-md-4">
+            <div class="checkbox">
+              <label for="Housing 2-0">
+                <input type="checkbox" name="Housing 2" id="Housing 2-0" value="1">
+                Independently
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="Housing 2-1">
+                <input type="checkbox" name="Housing 2" id="Housing 2-1" value="2">
+                Friends
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="Housing 2-2">
+                <input type="checkbox" name="Housing 2" id="Housing 2-2" value="3">
+                Family
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="Housing 2-3">
+                <input type="checkbox" name="Housing 2" id="Housing 2-3" value="4">
+                Significant Other
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="Housing 2-4">
+                <input type="checkbox" name="Housing 2" id="Housing 2-4" value="5">
+                Roommates
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="Housing 2-5">
+                <input type="checkbox" name="Housing 2" id="Housing 2-5" value="6">
+                Shelter
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Housing 3">Do you want to change your housing situation?</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="Housing 3-0">
+                <input type="radio" name="Housing 3" id="Housing 3-0" value="1" checked="checked">
+                Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Housing 3-1">
+                <input type="radio" name="Housing 3" id="Housing 3-1" value="2">
+                No
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Housing 3-2">
+                <input type="radio" name="Housing 3" id="Housing 3-2" value="3">
+                Maybe
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Housing 4">How often do you feel you would take advantage of a homeless shelter upon release?</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="Housing 4-0">
+                <input type="radio" name="Housing 4" id="Housing 4-0" value="1" checked="checked">
+                None at all
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Housing 4-1">
+                <input type="radio" name="Housing 4" id="Housing 4-1" value="2">
+                0-2 times a week
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Housing 4-2">
+                <input type="radio" name="Housing 4" id="Housing 4-2" value="">
+                3-5 times a week
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Housing 4-3">
+                <input type="radio" name="Housing 4" id="Housing 4-3" value="">
+                6+ times a week
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Checkboxes -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Housing 5">Where would you be residing upon release?</label>
+            <div class="col-md-4">
+            <div class="checkbox">
+              <label for="Housing 5-0">
+                <input type="checkbox" name="Housing 5" id="Housing 5-0" value="1">
+                Bronx
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="Housing 5-1">
+                <input type="checkbox" name="Housing 5" id="Housing 5-1" value="2">
+                Brooklyn
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="Housing 5-2">
+                <input type="checkbox" name="Housing 5" id="Housing 5-2" value="3">
+                Manhattan
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="Housing 5-3">
+                <input type="checkbox" name="Housing 5" id="Housing 5-3" value="4">
+                Queens
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="Housing 5-4">
+                <input type="checkbox" name="Housing 5" id="Housing 5-4" value="5">
+                Staten Island
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="Housing 5-5">
+                <input type="checkbox" name="Housing 5" id="Housing 5-5" value="6">
+                Outside the New York City Area
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="Housing 5-6">
+                <input type="checkbox" name="Housing 5" id="Housing 5-6" value="7">
+                Unknown
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Food 1">Do you know how to cook?</label>
+            <div class="col-md-4"> 
+              <label class="radio-inline" for="Food 1-0">
+                <input type="radio" name="Food 1" id="Food 1-0" value="1" checked="checked">
+                Yes
+              </label> 
+              <label class="radio-inline" for="Food 1-1">
+                <input type="radio" name="Food 1" id="Food 1-1" value="2">
+                No
+              </label>
+            </div>
+          </div>
+
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Food 2">Do you need assistance getting food?</label>
+            <div class="col-md-4"> 
+              <label class="radio-inline" for="Food 2-0">
+                <input type="radio" name="Food 2" id="Food 2-0" value="1" checked="checked">
+                Yes
+              </label> 
+              <label class="radio-inline" for="Food 2-1">
+                <input type="radio" name="Food 2" id="Food 2-1" value="2">
+                No
+              </label>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Food 3">How often do you feel you would take advantage of a food bank/pantry the first six months upon release?</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="Food 3-0">
+                <input type="radio" name="Food 3" id="Food 3-0" value="1" checked="checked">
+                0-2 times
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Food 3-1">
+                <input type="radio" name="Food 3" id="Food 3-1" value="2">
+                3-5 times
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Food 3-2">
+                <input type="radio" name="Food 3" id="Food 3-2" value="3">
+                6+ times
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Legal 1">Do you have outstanding legal issues?</label>
+            <div class="col-md-4"> 
+              <label class="radio-inline" for="Legal 1-0">
+                <input type="radio" name="Legal 1" id="Legal 1-0" value="1" checked="checked">
+                Yes
+              </label> 
+              <label class="radio-inline" for="Legal 1-1">
+                <input type="radio" name="Legal 1" id="Legal 1-1" value="2">
+                No
+              </label>
+            </div>
+          </div>
+
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Legal 2">Do you need help finding someone to advocate on your behalf?</label>
+            <div class="col-md-4"> 
+              <label class="radio-inline" for="Legal 2-0">
+                <input type="radio" name="Legal 2" id="Legal 2-0" value="1" checked="checked">
+                Yes
+              </label> 
+              <label class="radio-inline" for="Legal 2-1">
+                <input type="radio" name="Legal 2" id="Legal 2-1" value="2">
+                No
+              </label>
+            </div>
+          </div>
+
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Financial Aid 1">On a scale from 1-5, 1 being very worried and 5 being very comfortable, how would you rate your current financial situation?</label>
+            <div class="col-md-4"> 
+              <label class="radio-inline" for="Financial Aid 1-0">
+                <input type="radio" name="Financial Aid 1" id="Financial Aid 1-0" value="1" checked="checked">
+                1
+              </label> 
+              <label class="radio-inline" for="Financial Aid 1-1">
+                <input type="radio" name="Financial Aid 1" id="Financial Aid 1-1" value="2">
+                2
+              </label> 
+              <label class="radio-inline" for="Financial Aid 1-2">
+                <input type="radio" name="Financial Aid 1" id="Financial Aid 1-2" value="3">
+                3
+              </label> 
+              <label class="radio-inline" for="Financial Aid 1-3">
+                <input type="radio" name="Financial Aid 1" id="Financial Aid 1-3" value="4">
+                4
+              </label> 
+              <label class="radio-inline" for="Financial Aid 1-4">
+                <input type="radio" name="Financial Aid 1" id="Financial Aid 1-4" value="5">
+                5
+              </label>
+            </div>
+          </div>
+
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Financial Aid 2">Do you have outstanding debt to repay?</label>
+            <div class="col-md-4"> 
+              <label class="radio-inline" for="Financial Aid 2-0">
+                <input type="radio" name="Financial Aid 2" id="Financial Aid 2-0" value="1" checked="checked">
+                Yes
+              </label> 
+              <label class="radio-inline" for="Financial Aid 2-1">
+                <input type="radio" name="Financial Aid 2" id="Financial Aid 2-1" value="2">
+                No
+              </label>
+            </div>
+          </div>
+
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Financial Aid 3">Do you have outstanding legal fees to repay?</label>
+            <div class="col-md-4"> 
+              <label class="radio-inline" for="Financial Aid 3-0">
+                <input type="radio" name="Financial Aid 3" id="Financial Aid 3-0" value="1" checked="checked">
+                Yes
+              </label> 
+              <label class="radio-inline" for="Financial Aid 3-1">
+                <input type="radio" name="Financial Aid 3" id="Financial Aid 3-1" value="2">
+                No
+              </label>
+            </div>
+          </div>
+
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Financial Aid 4">Do you have outstanding fines to repay?</label>
+            <div class="col-md-4"> 
+              <label class="radio-inline" for="Financial Aid 4-0">
+                <input type="radio" name="Financial Aid 4" id="Financial Aid 4-0" value="1" checked="checked">
+                Yes
+              </label> 
+              <label class="radio-inline" for="Financial Aid 4-1">
+                <input type="radio" name="Financial Aid 4" id="Financial Aid 4-1" value="2">
+                No
+              </label>
+            </div>
+          </div>
+
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Financial Aid 5">Do you feel like you need financial assistance?</label>
+            <div class="col-md-4"> 
+              <label class="radio-inline" for="Financial Aid 5-0">
+                <input type="radio" name="Financial Aid 5" id="Financial Aid 5-0" value="1" checked="checked">
+                Yes
+              </label> 
+              <label class="radio-inline" for="Financial Aid 5-1">
+                <input type="radio" name="Financial Aid 5" id="Financial Aid 5-1" value="2">
+                No
+              </label> 
+              <label class="radio-inline" for="Financial Aid 5-2">
+                <input type="radio" name="Financial Aid 5" id="Financial Aid 5-2" value="3">
+                Maybe
+              </label>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Family 1">What is your current marital status?</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="Family 1-0">
+                <input type="radio" name="Family 1" id="Family 1-0" value="1" checked="checked">
+                Single
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Family 1-1">
+                <input type="radio" name="Family 1" id="Family 1-1" value="2">
+                Married
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Family 1-2">
+                <input type="radio" name="Family 1" id="Family 1-2" value="3">
+                Divorced
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Family 1-3">
+                <input type="radio" name="Family 1" id="Family 1-3" value="4">
+                Partner
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Family 2">How many children under 18 do you have?</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="Family 2-0">
+                <input type="radio" name="Family 2" id="Family 2-0" value="1" checked="checked">
+                0
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Family 2-1">
+                <input type="radio" name="Family 2" id="Family 2-1" value="2">
+                1-2
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Family 2-2">
+                <input type="radio" name="Family 2" id="Family 2-2" value="3">
+                3-5
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Family 2-3">
+                <input type="radio" name="Family 2" id="Family 2-3" value="4">
+                6+
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Family 3">Are you worried about supporting your children?</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="Family 3-0">
+                <input type="radio" name="Family 3" id="Family 3-0" value="1" checked="checked">
+                Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Family 3-1">
+                <input type="radio" name="Family 3" id="Family 3-1" value="2">
+                No
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Family 4">Are you in touch with your family?</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="Family 4-0">
+                <input type="radio" name="Family 4" id="Family 4-0" value="1" checked="checked">
+                Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Family 4-1">
+                <input type="radio" name="Family 4" id="Family 4-1" value="2">
+                No
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Family 5">If not, do you want to try to reconnect with your family?</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="Family 5-0">
+                <input type="radio" name="Family 5" id="Family 5-0" value="1" checked="checked">
+                Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Family 5-1">
+                <input type="radio" name="Family 5" id="Family 5-1" value="2">
+                No
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Community 1">Have you had trouble making friends since you were released?</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="Community 1-0">
+                <input type="radio" name="Community 1" id="Community 1-0" value="1" checked="checked">
+                Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Community 1-1">
+                <input type="radio" name="Community 1" id="Community 1-1" value="2">
+                No
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Community 2">Have you had trouble reconnecting with old friends since you have been released?  </label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="Community 2-0">
+                <input type="radio" name="Community 2" id="Community 2-0" value="1" checked="checked">
+                Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Community 2-1">
+                <input type="radio" name="Community 2" id="Community 2-1" value="2">
+                No
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Community 3">Do you feel like you have a reliable community around you?</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="Community 3-0">
+                <input type="radio" name="Community 3" id="Community 3-0" value="1" checked="checked">
+                1 - no not at all
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Community 3-1">
+                <input type="radio" name="Community 3" id="Community 3-1" value="2">
+                2 - I have a community that i know i cannot rely on
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Community 3-2">
+                <input type="radio" name="Community 3" id="Community 3-2" value="3">
+                3- I have one but it doesn't feel very reliable
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Community 3-3">
+                <input type="radio" name="Community 3" id="Community 3-3" value="4">
+                4 - Yes, it is a good community that I can turn to when need be.
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Community 3-4">
+                <input type="radio" name="Community 3" id="Community 3-4" value="5">
+                5 - Yes, I feel supported and welcomed and I know I can rely on people there.
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Community 4">If not, do you feel like you want to find a community for yourself?</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="Community 4-0">
+                <input type="radio" name="Community 4" id="Community 4-0" value="1" checked="checked">
+                Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Community 4-1">
+                <input type="radio" name="Community 4" id="Community 4-1" value="2">
+                No
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Community 4-2">
+                <input type="radio" name="Community 4" id="Community 4-2" value="3">
+                Not Sure
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Community 5">How hopeful are you about finding the right community for you?</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="Community 5-0">
+                <input type="radio" name="Community 5" id="Community 5-0" value="1" checked="checked">
+                Hopeful
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Community 5-1">
+                <input type="radio" name="Community 5" id="Community 5-1" value="2">
+                Not Hopeful
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Community 5-2">
+                <input type="radio" name="Community 5" id="Community 5-2" value="3">
+                Not Sure
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Community 5-3">
+                <input type="radio" name="Community 5" id="Community 5-3" value="">
+                N/A
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Community 6">How difficult do you find reintegrating after being incarcerated?</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="Community 6-0">
+                <input type="radio" name="Community 6" id="Community 6-0" value="1" checked="checked">
+                1 - Not difficult at all
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Community 6-1">
+                <input type="radio" name="Community 6" id="Community 6-1" value="2">
+                2 - It's coming pretty easy to me
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Community 6-2">
+                <input type="radio" name="Community 6" id="Community 6-2" value="3">
+                3 - Sometimes I have trouble.
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Community 6-3">
+                <input type="radio" name="Community 6" id="Community 6-3" value="4">
+                4 - I feel frequently challenged.
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Community 6-4">
+                <input type="radio" name="Community 6" id="Community 6-4" value="5">
+                5- It is very difficult and I am not having much luck.
+              </label>
+            </div>
+            </div>
+          </div>
+
+          </fieldset>
+          </form>
+          <form class="form-horizontal">
+          <fieldset>
+
+          <!-- Form Name -->
+          <legend>Form Name</legend>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="General 1">How old will you be upon release?</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="General 1-0">
+                <input type="radio" name="General 1" id="General 1-0" value="1" checked="checked">
+                18 yrs - 30 yrs
+              </label>
+            </div>
+            <div class="radio">
+              <label for="General 1-1">
+                <input type="radio" name="General 1" id="General 1-1" value="2">
+                31 yrs - 45 yrs
+              </label>
+            </div>
+            <div class="radio">
+              <label for="General 1-2">
+                <input type="radio" name="General 1" id="General 1-2" value="3">
+                45 yrs - 65 yrs
+              </label>
+            </div>
+            <div class="radio">
+              <label for="General 1-3">
+                <input type="radio" name="General 1" id="General 1-3" value="4">
+                65 yrs +
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="General 2">How many years did you spend incarcerated?</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="General 2-0">
+                <input type="radio" name="General 2" id="General 2-0" value="1" checked="checked">
+                0 yrs - 5 yrs
+              </label>
+            </div>
+            <div class="radio">
+              <label for="General 2-1">
+                <input type="radio" name="General 2" id="General 2-1" value="2">
+                5 yrs - 10 yrs
+              </label>
+            </div>
+            <div class="radio">
+              <label for="General 2-2">
+                <input type="radio" name="General 2" id="General 2-2" value="3">
+                10 yrs - 20 yrs
+              </label>
+            </div>
+            <div class="radio">
+              <label for="General 2-3">
+                <input type="radio" name="General 2" id="General 2-3" value="4">
+                20 yrs +
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="General 3">What is your sex?</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="General 3-0">
+                <input type="radio" name="General 3" id="General 3-0" value="1" checked="checked">
+                Male
+              </label>
+            </div>
+            <div class="radio">
+              <label for="General 3-1">
+                <input type="radio" name="General 3" id="General 3-1" value="2">
+                Female
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="General 4">Do you identify as gay, lesbian, bisexual, or queer?</label>
+            <div class="col-md-4"> 
+              <label class="radio-inline" for="General 4-0">
+                <input type="radio" name="General 4" id="General 4-0" value="1" checked="checked">
+                Yes
+              </label> 
+              <label class="radio-inline" for="General 4-1">
+                <input type="radio" name="General 4" id="General 4-1" value="2">
+                No
+              </label>
+            </div>
+          </div>
+
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="General 5">Are you a veteran?</label>
+            <div class="col-md-4"> 
+              <label class="radio-inline" for="General 5-0">
+                <input type="radio" name="General 5" id="General 5-0" value="1" checked="checked">
+                Yes
+              </label> 
+              <label class="radio-inline" for="General 5-1">
+                <input type="radio" name="General 5" id="General 5-1" value="2">
+                No
+              </label>
+            </div>
+          </div>
+
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="General 6">Do you identify as transgender?</label>
+            <div class="col-md-4"> 
+              <label class="radio-inline" for="General 6-0">
+                <input type="radio" name="General 6" id="General 6-0" value="1" checked="checked">
+                Yes
+              </label> 
+              <label class="radio-inline" for="General 6-1">
+                <input type="radio" name="General 6" id="General 6-1" value="2">
+                No
+              </label>
+            </div>
+          </div>
+
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Housing 1">Do you have a permanent place to live?</label>
+            <div class="col-md-4"> 
+              <label class="radio-inline" for="Housing 1-0">
+                <input type="radio" name="Housing 1" id="Housing 1-0" value="1" checked="checked">
+                Yes
+              </label> 
+              <label class="radio-inline" for="Housing 1-1">
+                <input type="radio" name="Housing 1" id="Housing 1-1" value="2">
+                No
+              </label> 
+              <label class="radio-inline" for="Housing 1-2">
+                <input type="radio" name="Housing 1" id="Housing 1-2" value="3">
+                Maybe
+              </label>
+            </div>
+          </div>
+
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="General">Is english your native language?</label>
+            <div class="col-md-4"> 
+              <label class="radio-inline" for="General-0">
+                <input type="radio" name="General" id="General-0" value="1" checked="checked">
+                Yes
+              </label> 
+              <label class="radio-inline" for="General-1">
+                <input type="radio" name="General" id="General-1" value="2">
+                No
+              </label>
+            </div>
+          </div>
+
+          <!-- Multiple Checkboxes -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Housing 2">Will you be living:</label>
+            <div class="col-md-4">
+            <div class="checkbox">
+              <label for="Housing 2-0">
+                <input type="checkbox" name="Housing 2" id="Housing 2-0" value="1">
+                Independently
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="Housing 2-1">
+                <input type="checkbox" name="Housing 2" id="Housing 2-1" value="2">
+                Friends
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="Housing 2-2">
+                <input type="checkbox" name="Housing 2" id="Housing 2-2" value="3">
+                Family
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="Housing 2-3">
+                <input type="checkbox" name="Housing 2" id="Housing 2-3" value="4">
+                Significant Other
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="Housing 2-4">
+                <input type="checkbox" name="Housing 2" id="Housing 2-4" value="5">
+                Roommates
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="Housing 2-5">
+                <input type="checkbox" name="Housing 2" id="Housing 2-5" value="6">
+                Shelter
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Housing 3">Do you want to change your housing situation?</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="Housing 3-0">
+                <input type="radio" name="Housing 3" id="Housing 3-0" value="1" checked="checked">
+                Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Housing 3-1">
+                <input type="radio" name="Housing 3" id="Housing 3-1" value="2">
+                No
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Housing 3-2">
+                <input type="radio" name="Housing 3" id="Housing 3-2" value="3">
+                Maybe
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Housing 4">How often do you feel you would take advantage of a homeless shelter upon release?</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="Housing 4-0">
+                <input type="radio" name="Housing 4" id="Housing 4-0" value="1" checked="checked">
+                None at all
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Housing 4-1">
+                <input type="radio" name="Housing 4" id="Housing 4-1" value="2">
+                0-2 times a week
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Housing 4-2">
+                <input type="radio" name="Housing 4" id="Housing 4-2" value="">
+                3-5 times a week
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Housing 4-3">
+                <input type="radio" name="Housing 4" id="Housing 4-3" value="">
+                6+ times a week
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Checkboxes -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Housing 5">Where would you be residing upon release?</label>
+            <div class="col-md-4">
+            <div class="checkbox">
+              <label for="Housing 5-0">
+                <input type="checkbox" name="Housing 5" id="Housing 5-0" value="1">
+                Bronx
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="Housing 5-1">
+                <input type="checkbox" name="Housing 5" id="Housing 5-1" value="2">
+                Brooklyn
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="Housing 5-2">
+                <input type="checkbox" name="Housing 5" id="Housing 5-2" value="3">
+                Manhattan
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="Housing 5-3">
+                <input type="checkbox" name="Housing 5" id="Housing 5-3" value="4">
+                Queens
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="Housing 5-4">
+                <input type="checkbox" name="Housing 5" id="Housing 5-4" value="5">
+                Staten Island
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="Housing 5-5">
+                <input type="checkbox" name="Housing 5" id="Housing 5-5" value="6">
+                Outside the New York City Area
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="Housing 5-6">
+                <input type="checkbox" name="Housing 5" id="Housing 5-6" value="7">
+                Unknown
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Food 1">Do you know how to cook?</label>
+            <div class="col-md-4"> 
+              <label class="radio-inline" for="Food 1-0">
+                <input type="radio" name="Food 1" id="Food 1-0" value="1" checked="checked">
+                Yes
+              </label> 
+              <label class="radio-inline" for="Food 1-1">
+                <input type="radio" name="Food 1" id="Food 1-1" value="2">
+                No
+              </label>
+            </div>
+          </div>
+
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Food 2">Do you need assistance getting food?</label>
+            <div class="col-md-4"> 
+              <label class="radio-inline" for="Food 2-0">
+                <input type="radio" name="Food 2" id="Food 2-0" value="1" checked="checked">
+                Yes
+              </label> 
+              <label class="radio-inline" for="Food 2-1">
+                <input type="radio" name="Food 2" id="Food 2-1" value="2">
+                No
+              </label>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Food 3">How often do you feel you would take advantage of a food bank/pantry the first six months upon release?</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="Food 3-0">
+                <input type="radio" name="Food 3" id="Food 3-0" value="1" checked="checked">
+                0-2 times
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Food 3-1">
+                <input type="radio" name="Food 3" id="Food 3-1" value="2">
+                3-5 times
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Food 3-2">
+                <input type="radio" name="Food 3" id="Food 3-2" value="3">
+                6+ times
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Legal 1">Do you have outstanding legal issues?</label>
+            <div class="col-md-4"> 
+              <label class="radio-inline" for="Legal 1-0">
+                <input type="radio" name="Legal 1" id="Legal 1-0" value="1" checked="checked">
+                Yes
+              </label> 
+              <label class="radio-inline" for="Legal 1-1">
+                <input type="radio" name="Legal 1" id="Legal 1-1" value="2">
+                No
+              </label>
+            </div>
+          </div>
+
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Legal 2">Do you need help finding someone to advocate on your behalf?</label>
+            <div class="col-md-4"> 
+              <label class="radio-inline" for="Legal 2-0">
+                <input type="radio" name="Legal 2" id="Legal 2-0" value="1" checked="checked">
+                Yes
+              </label> 
+              <label class="radio-inline" for="Legal 2-1">
+                <input type="radio" name="Legal 2" id="Legal 2-1" value="2">
+                No
+              </label>
+            </div>
+          </div>
+
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Financial Aid 1">On a scale from 1-5, 1 being very worried and 5 being very comfortable, how would you rate your current financial situation?</label>
+            <div class="col-md-4"> 
+              <label class="radio-inline" for="Financial Aid 1-0">
+                <input type="radio" name="Financial Aid 1" id="Financial Aid 1-0" value="1" checked="checked">
+                1
+              </label> 
+              <label class="radio-inline" for="Financial Aid 1-1">
+                <input type="radio" name="Financial Aid 1" id="Financial Aid 1-1" value="2">
+                2
+              </label> 
+              <label class="radio-inline" for="Financial Aid 1-2">
+                <input type="radio" name="Financial Aid 1" id="Financial Aid 1-2" value="3">
+                3
+              </label> 
+              <label class="radio-inline" for="Financial Aid 1-3">
+                <input type="radio" name="Financial Aid 1" id="Financial Aid 1-3" value="4">
+                4
+              </label> 
+              <label class="radio-inline" for="Financial Aid 1-4">
+                <input type="radio" name="Financial Aid 1" id="Financial Aid 1-4" value="5">
+                5
+              </label>
+            </div>
+          </div>
+
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Financial Aid 2">Do you have outstanding debt to repay?</label>
+            <div class="col-md-4"> 
+              <label class="radio-inline" for="Financial Aid 2-0">
+                <input type="radio" name="Financial Aid 2" id="Financial Aid 2-0" value="1" checked="checked">
+                Yes
+              </label> 
+              <label class="radio-inline" for="Financial Aid 2-1">
+                <input type="radio" name="Financial Aid 2" id="Financial Aid 2-1" value="2">
+                No
+              </label>
+            </div>
+          </div>
+
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Financial Aid 3">Do you have outstanding legal fees to repay?</label>
+            <div class="col-md-4"> 
+              <label class="radio-inline" for="Financial Aid 3-0">
+                <input type="radio" name="Financial Aid 3" id="Financial Aid 3-0" value="1" checked="checked">
+                Yes
+              </label> 
+              <label class="radio-inline" for="Financial Aid 3-1">
+                <input type="radio" name="Financial Aid 3" id="Financial Aid 3-1" value="2">
+                No
+              </label>
+            </div>
+          </div>
+
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Financial Aid 4">Do you have outstanding fines to repay?</label>
+            <div class="col-md-4"> 
+              <label class="radio-inline" for="Financial Aid 4-0">
+                <input type="radio" name="Financial Aid 4" id="Financial Aid 4-0" value="1" checked="checked">
+                Yes
+              </label> 
+              <label class="radio-inline" for="Financial Aid 4-1">
+                <input type="radio" name="Financial Aid 4" id="Financial Aid 4-1" value="2">
+                No
+              </label>
+            </div>
+          </div>
+
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Financial Aid 5">Do you feel like you need financial assistance?</label>
+            <div class="col-md-4"> 
+              <label class="radio-inline" for="Financial Aid 5-0">
+                <input type="radio" name="Financial Aid 5" id="Financial Aid 5-0" value="1" checked="checked">
+                Yes
+              </label> 
+              <label class="radio-inline" for="Financial Aid 5-1">
+                <input type="radio" name="Financial Aid 5" id="Financial Aid 5-1" value="2">
+                No
+              </label> 
+              <label class="radio-inline" for="Financial Aid 5-2">
+                <input type="radio" name="Financial Aid 5" id="Financial Aid 5-2" value="3">
+                Maybe
+              </label>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Family 1">What is your current marital status?</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="Family 1-0">
+                <input type="radio" name="Family 1" id="Family 1-0" value="1" checked="checked">
+                Single
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Family 1-1">
+                <input type="radio" name="Family 1" id="Family 1-1" value="2">
+                Married
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Family 1-2">
+                <input type="radio" name="Family 1" id="Family 1-2" value="3">
+                Divorced
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Family 1-3">
+                <input type="radio" name="Family 1" id="Family 1-3" value="4">
+                Partner
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Family 2">How many children under 18 do you have?</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="Family 2-0">
+                <input type="radio" name="Family 2" id="Family 2-0" value="1" checked="checked">
+                0
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Family 2-1">
+                <input type="radio" name="Family 2" id="Family 2-1" value="2">
+                1-2
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Family 2-2">
+                <input type="radio" name="Family 2" id="Family 2-2" value="3">
+                3-5
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Family 2-3">
+                <input type="radio" name="Family 2" id="Family 2-3" value="4">
+                6+
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Family 3">Are you worried about supporting your children?</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="Family 3-0">
+                <input type="radio" name="Family 3" id="Family 3-0" value="1" checked="checked">
+                Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Family 3-1">
+                <input type="radio" name="Family 3" id="Family 3-1" value="2">
+                No
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Family 4">Are you in touch with your family?</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="Family 4-0">
+                <input type="radio" name="Family 4" id="Family 4-0" value="1" checked="checked">
+                Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Family 4-1">
+                <input type="radio" name="Family 4" id="Family 4-1" value="2">
+                No
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Family 5">If not, do you want to try to reconnect with your family?</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="Family 5-0">
+                <input type="radio" name="Family 5" id="Family 5-0" value="1" checked="checked">
+                Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Family 5-1">
+                <input type="radio" name="Family 5" id="Family 5-1" value="2">
+                No
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Community 1">Have you had trouble making friends since you were released?</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="Community 1-0">
+                <input type="radio" name="Community 1" id="Community 1-0" value="1" checked="checked">
+                Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Community 1-1">
+                <input type="radio" name="Community 1" id="Community 1-1" value="2">
+                No
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Community 2">Have you had trouble reconnecting with old friends since you have been released?  </label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="Community 2-0">
+                <input type="radio" name="Community 2" id="Community 2-0" value="1" checked="checked">
+                Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Community 2-1">
+                <input type="radio" name="Community 2" id="Community 2-1" value="2">
+                No
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Community 3">Do you feel like you have a reliable community around you?</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="Community 3-0">
+                <input type="radio" name="Community 3" id="Community 3-0" value="1" checked="checked">
+                1 - no not at all
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Community 3-1">
+                <input type="radio" name="Community 3" id="Community 3-1" value="2">
+                2 - I have a community that i know i cannot rely on
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Community 3-2">
+                <input type="radio" name="Community 3" id="Community 3-2" value="3">
+                3- I have one but it doesn't feel very reliable
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Community 3-3">
+                <input type="radio" name="Community 3" id="Community 3-3" value="4">
+                4 - Yes, it is a good community that I can turn to when need be.
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Community 3-4">
+                <input type="radio" name="Community 3" id="Community 3-4" value="5">
+                5 - Yes, I feel supported and welcomed and I know I can rely on people there.
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Community 4">If not, do you feel like you want to find a community for yourself?</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="Community 4-0">
+                <input type="radio" name="Community 4" id="Community 4-0" value="1" checked="checked">
+                Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Community 4-1">
+                <input type="radio" name="Community 4" id="Community 4-1" value="2">
+                No
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Community 4-2">
+                <input type="radio" name="Community 4" id="Community 4-2" value="3">
+                Not Sure
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Community 5">How hopeful are you about finding the right community for you?</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="Community 5-0">
+                <input type="radio" name="Community 5" id="Community 5-0" value="1" checked="checked">
+                Hopeful
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Community 5-1">
+                <input type="radio" name="Community 5" id="Community 5-1" value="2">
+                Not Hopeful
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Community 5-2">
+                <input type="radio" name="Community 5" id="Community 5-2" value="3">
+                Not Sure
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Community 5-3">
+                <input type="radio" name="Community 5" id="Community 5-3" value="">
+                N/A
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Community 6">How difficult do you find reintegrating after being incarcerated?</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="Community 6-0">
+                <input type="radio" name="Community 6" id="Community 6-0" value="1" checked="checked">
+                1 - Not difficult at all
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Community 6-1">
+                <input type="radio" name="Community 6" id="Community 6-1" value="2">
+                2 - It's coming pretty easy to me
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Community 6-2">
+                <input type="radio" name="Community 6" id="Community 6-2" value="3">
+                3 - Sometimes I have trouble.
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Community 6-3">
+                <input type="radio" name="Community 6" id="Community 6-3" value="4">
+                4 - I feel frequently challenged.
+              </label>
+            </div>
+            <div class="radio">
+              <label for="Community 6-4">
+                <input type="radio" name="Community 6" id="Community 6-4" value="5">
+                5- It is very difficult and I am not having much luck.
+              </label>
+            </div>
+            </div>
+          </div>
+
+          <!-- Button -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="singlebutton"></label>
+              <div class="col-md-4">
+                <button id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+
+          </fieldset>
+          </form>
+
+      </div> <!-- /container -->
 
 
-    
-    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="app.js"></script>
-</body>
-
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/jquery.min.js"><\/script>')</script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
 </html>
